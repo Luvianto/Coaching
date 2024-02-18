@@ -5,6 +5,7 @@ using UnityEngine;
 public class Trigger : MonoBehaviour
 {
     public LogicScript logic;
+    public int score;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class Trigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.layer == 3){
-            logic.addScore(2);
+            logic.addScore(score);
         }
     }
 }
